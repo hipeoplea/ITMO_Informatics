@@ -1,5 +1,5 @@
 nums = [int(x) for x in input()]
-if len(nums) != 7:
+if len(nums) != 7 or any([x not in '01' for x in map(str, nums)]):
     print("Invalid number")
 else:
     s1 = (nums[0] ^ nums[2] ^ nums[4] ^ nums[6]) * 1
