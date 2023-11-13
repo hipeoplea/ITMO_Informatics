@@ -7,9 +7,9 @@ for i in [x for x in os.listdir('lab3_tests/3.2') if x.endswith('.txt')]:
     with open('lab3_tests/3.2/' + i, encoding='utf-8') as f:
         file = f.read()
         # pattern = '\\b\w*[уеыаоэяию]{2}\w*\s+\\b\w*[^уеыаоэяию\s]{0,3}\\b'
-        pattern = r"(\b[\w]*[ёуеыаоэяию]{2}[\w]*\b)[\W]?[\s]([^йцкнгшщзхъждлрпвфчсмтьб]*[йцкнгшщзхъждлрпвфчсмтьб]?){0,3}[^йцкнгшщзхъждлрпвфчсмтьб]*\W"
+        pattern = r"(\b[\w]*[ёуеыаоэяию]{2}[\w]*\b)\W+\b(?:[ёуеыаоэяию]*[йцкнгшщзхъждлрпвфчсмтьб]|[ёуеыаоэяию]+){1,3}[ёуеыаоэяию]*\b"
         matches = re.findall(pattern, file, flags=re.IGNORECASE)
-        print(i, [x[0] for x in matches])
+        print(i, [x for x in matches])
 
 for i in [x for x in os.listdir('lab3_tests/3.2') if x.endswith('.txt')]:
     with open('lab3_tests/3.2/' + i, encoding='utf-8') as f:
