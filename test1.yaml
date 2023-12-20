@@ -1,0 +1,27 @@
+data:
+  first_name: Adam
+  last_name: Bertran
+  hair_color: Brown
+  married: true
+  spouse:
+    - name: Miranda
+      occupation: mom
+      interests: Instagram
+    - name: Robert
+      occupation: dad
+      interests: cars
+    - member:
+        - name: Emilia
+          occupation: sister
+        - names:
+            - name: Bob
+            - name: Bobert
+          occupation: brother
+  dog_count: 2
+  dogs:
+    - name: Ellioth
+      breed: Shin-Tzu
+      color: black/white
+    - name: Brody
+      breed: Shin-Tzu
+      color: black/white
